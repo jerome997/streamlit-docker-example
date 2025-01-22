@@ -9,6 +9,8 @@ services:
             - ./:/usr/src/app
         ports:
             - 8502:8502
+        environment:
+            - TEST_ENV=$TEST_ENV
         image: yourstreamlitapp:latest
     app2:
         pull_policy: build
