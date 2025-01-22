@@ -2,6 +2,7 @@ version: '3.7'
 
 services:
     app:
+        pull_policy: build
         build: ./
         command: streamlit run app/main.py --server.port 8501
         volumes:
