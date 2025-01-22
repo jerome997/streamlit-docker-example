@@ -4,9 +4,9 @@ services:
     app:
         pull_policy: build
         build: ./
-        command: streamlit run app/main.py --server.port 8502
+        command: streamlit run app/main.py --server.port 8502 --server.address=0.0.0.0
         volumes:
             - ./:/usr/src/app
         ports:
-            - 8501:8501
+            - 8502:8502
         image: yourstreamlitapp:latest
